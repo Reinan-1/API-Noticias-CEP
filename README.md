@@ -1,2 +1,2 @@
 # API-Noticias-CEP
-Uma api que retorna notícias se basendo pelo Cep informado
+Uma API que retorna notícias com base no CEP informado.
