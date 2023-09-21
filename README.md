@@ -16,10 +16,10 @@ Antes de começar, certifique-se de ter os seguintes requisitos:
 - Retorna uma lista de notícias com títulos, descrições e URLs.
 
 ## 🧰 Tecnologias Usadas 
-- Node.js: Plataforma de execução de código JavaScript.
+- [Node.js](https://nodejs.org/en/download): Plataforma de execução de código JavaScript.
 - Express.js: Framework web para Node.js.
-- BrasilAPI: API para informações relacionadas ao Brasil.
-- NewsAPI: API para notícias de todo o mundo.
+- [BrasilAPI](https://brasilapi.com.br/): API para informações relacionadas ao Brasil.
+- [NewsAPI](https://newsapi.org/): API para notícias de todo o mundo.
 - dotenv: Para gerenciar variáveis de ambiente.
 
 ## 🛣 Instruções de Uso 
