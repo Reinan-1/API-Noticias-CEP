@@ -1,7 +1,8 @@
 const express = require("express");
-const apiKey = require("../config.js");
 const NewsAPI = require('newsapi');
+require("dotenv").config();
 
+const apiKey = process.env.API_KEY;
 const newsapi = new NewsAPI(apiKey);
 const app = express();
 const porta = 3000;
@@ -37,7 +38,7 @@ app.get("/noticias/cidade/:cep", async (req, res) => {
 });
 
 
-app.listen(porta, () => { console.log(`Rodando na porta ${porta}.`); });
+app.listen(porta, () => console.log(`Rodando na porta ${porta}.`));
 
 async function getCidade(cep) {
 
@@ -48,7 +49,6 @@ async function getCidade(cep) {
         const data = await resposta.json();
 
         if (!data.city) throw new Error("404");
-
 
         return data.city;
 

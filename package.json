@@ -2,7 +2,7 @@
   "name": "api-noticias-cep",
   "version": "1.0.0",
   "description": "Uma API que retorna notícias com base no CEP informado.",
-  "main": "config.js",
+  "main": "./src/index.js",
   "scripts": {
     "dev": "nodemon ./src/index.js"
   },
@@ -10,6 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^16.3.1",
     "express": "^4.18.2",
     "newsapi": "^2.4.1",
     "nodemon": "^3.0.1"
