@@ -4,6 +4,7 @@
   "description": "Uma API que retorna notícias com base no CEP informado.",
   "main": "./src/index.js",
   "scripts": {
+    "start": "node ./src/index.js",
     "dev": "nodemon ./src/index.js"
   },
   "keywords": [],
