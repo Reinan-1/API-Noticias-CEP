@@ -6,6 +6,8 @@ const newsapi = new NewsAPI(process.env.API_KEY);
 const mostrarNoticiasCidade = async (req, res) => {
     const { cep } = req.params;
 
+    if(cep.length > 8) return res.status(400).json({ "mensagem": "Cep inválido." });
+
     try {
         const cidade = await mostrarCidade(cep);
         if (!cidade) return res.status(404).json({ "mensagem": "Cep não encontrado." });
