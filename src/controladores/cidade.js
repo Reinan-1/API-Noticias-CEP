@@ -1,35 +1,21 @@
-const NewsAPI = require('newsapi');
-
 const mostrarCidade = require("../utils/mostrarCidade");
-const newsapi = new NewsAPI(process.env.API_KEY);
+const buscarNoticias = require("../servicos/buscarNoticias");
 
 const mostrarNoticiasCidade = async (req, res) => {
     const { cep } = req.params;
 
-    if(cep.length > 8) return res.status(400).json({ "mensagem": "Cep inválido." });
+    if (cep.length > 8) return res.status(400).json({ "mensagem": "Cep inválido." });
 
     try {
         const cidade = await mostrarCidade(cep);
         if (!cidade) return res.status(404).json({ "mensagem": "Cep não encontrado." });
 
-        const resposta = await newsapi.v2.everything({
-            q: cidade,
-            language: 'pt',
-            sortBy: 'relevancy',
-            pageSize: 5
-        })
+        const noticias = await buscarNoticias(cidade);
 
-        const artigos = resposta.articles.map(artigo => {
-            return {
-                titulo: artigo.title,
-                descricao: artigo.description,
-                url: artigo.url
-            }
-        });
-
-        return res.json(artigos);
+        return res.json(noticias);
     } catch (error) {
         console.log(error.message);
+        return res.status(500).json({ "mensagem": "Erro interno do servidor." });
     }
 }
 
