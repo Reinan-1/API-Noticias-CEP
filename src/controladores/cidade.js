@@ -1,4 +1,4 @@
-const mostrarCidade = require("../utils/mostrarCidade");
+const mostrarCidade = require("../servicos/mostrarCidade");
 const buscarNoticias = require("../servicos/buscarNoticias");
 
 const mostrarNoticiasCidade = async (req, res) => {
