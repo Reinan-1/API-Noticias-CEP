@@ -4,7 +4,7 @@
 A API de Notícias com Base em CEP é uma aplicação que permite obter notícias com base em um CEP fornecido. Ela utiliza a API BrasilAPI para obter a cidade associada a um CEP e, em seguida, usa a API NewsAPI para buscar notícias relacionadas a essa cidade.
 
 ## 🚀 Deploy da Aplicação
-A API está disponível em: [API-Notícias](https://amber-kangaroo-wig.cyclic.app/)
+A API está disponível em: [API-Notícias-CEP](https://amber-kangaroo-wig.cyclic.app/noticias/cidade/)
 
 ## 🛠️ Pré-requisitos 
 Antes de começar, certifique-se de ter os seguintes requisitos:
